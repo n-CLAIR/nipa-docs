@@ -10,6 +10,6 @@ Leaderboard
 
     :ref:`nsml submit<nsml submit>` 명령어로 모델을 평가하고, leaderboard에 점수를 올릴 수 있습니다.
 
-    이번 해커톤에서는 mAP를 평가지표로 활용합니다. submit된 세션은 leaderboard에 즉시 반영됩니다.
+    submit된 세션은 leaderboard에 실시간으로 반영됩니다.
 
     submit 명령어와 자세한 사항은 :ref:`nsml submit<nsml submit>` 설명에서 확인하시기 바랍니다.

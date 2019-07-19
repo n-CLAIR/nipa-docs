@@ -4,7 +4,7 @@ nsml.bind
 ---------
 .. py:function:: nsml.bind(save=None, load=None, **kwargs)
 
-    NSML에서 내부적으로 사용하는 함수 또는 변수들을 하나로 묶어주는 함수입니다.
+    NSML에서 사용할 save와 load, infer함수를 바인드해줍니다.
 
     :param fn save:
         모델을 저장하는 :ref:`save 함수<nsml.bind-save>` 입니다.

@@ -20,7 +20,7 @@ nsml.save
 
     Example ::
 
-            def save(filename, **kwargs):
-                torch.save(object, filename)
+            def save(dir_path, **kwargs):
+                torch.save(object, os.path.join(dir_path,'model.pth'))
                 print('saved!')
             nsml.save(checkpoint=checkpoint, save_fn=save)

@@ -9,24 +9,19 @@ bind_model
     .. code-block:: python
 
         def bind_model(model, class_to_save, optimizer=None):
-            def load(filename, **kwargs):
+            def load(dir_path, **kwargs):
                 state = torch.load(os.path.join(filename, 'model.pt'))
                 model.load_state_dict(state['model'])
                 if 'optimizer' in state and optimizer:
                     optimizer.load_state_dict(state['optimizer'])
-                with open(os.path.join(filename, 'class.pkl'), 'rb') as fp:
-                    temp_class = pickle.load(fp)
-                nsml.copy(temp_class, class_to_save)
                 print('Model loaded')
 
-            def save(filename, **kwargs):
+            def save(dir_path, **kwargs):
                 state = {
                     'model': model.state_dict(),
                     'optimizer': optimizer.state_dict()
                 }
-                torch.save(state, os.path.join(filename, 'model.pt'))
-                with open(os.path.join(filename, 'class.pkl'), 'wb') as fp:
-                    pickle.dump(class_to_save, fp)
+                torch.save(state, os.path.join(dir_path, 'model.pt'))
 
             def infer(input, top_k=100):
                 # load data into torch tensor
