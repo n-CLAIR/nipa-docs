@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>nsml.paused &mdash; NSML  문서</title>
+  <title>nsml.paused &mdash; NSML  documentation</title>
   
 
   
@@ -184,29 +184,32 @@
 <span id="id1"></span><h1>nsml.paused<a class="headerlink" href="#nsml-paused" title="제목 주소">¶</a></h1>
 <dl class="function">
 <dt id="nsml.paused">
-<code class="sig-prename descclassname">nsml.</code><code class="sig-name descname">paused</code><span class="sig-paren">(</span><em class="sig-param">scope=None</em><span class="sig-paren">)</span><a class="headerlink" href="#nsml.paused" title="정의 주소">¶</a></dt>
+<code class="descclassname">nsml.</code><code class="descname">paused</code><span class="sig-paren">(</span><em>scope=None</em><span class="sig-paren">)</span><a class="headerlink" href="#nsml.paused" title="정의 주소">¶</a></dt>
 <dd><p><a class="reference internal" href="../session/fork_a_session.html#nsml-fork"><span class="std std-ref">nsml fork</span></a>, <a class="reference internal" href="../session/submit_a_session.html#nsml-submit"><span class="std std-ref">nsml submit</span></a> 과 같이 nsml command 를 사용해서 세션을 재생성하는 명령어를 실행할 때 사용되는 함수입니다.</p>
 <p>내부적으로 main entry 파일에 \-\-pause 1 이란 옵션을 줘서 세션을 재생성하므로, entry 파일에서 'pause(int)' 란 옵션을 받을 수 있어야 합니다.</p>
 <p>각 커맨드에 따라서 동작방식이 다릅니다.</p>
-<dl class="field-list simple">
-<dt class="field-odd">매개변수</dt>
-<dd class="field-odd"><p><strong>scope</strong> -- entry 파일 main 함수의 scope 입니다.</p>
-</dd>
-</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">매개 변수:</th><td class="field-body"><strong>scope</strong> -- entry 파일 main 함수의 scope 입니다.</td>
+</tr>
+</tbody>
+</table>
 <div class="admonition warning">
-<p class="admonition-title">경고</p>
-<p>entry 파일의 main 함수가 있다면 main 함수의 <code class="docutils literal notranslate"><span class="pre">locals()</span></code> 변수를 넘겨주어야 합니다. 그렇지 않으면 에러가 발생합니다.</p>
+<p class="first admonition-title">경고</p>
+<p class="last">entry 파일의 main 함수가 있다면 main 함수의 <code class="docutils literal notranslate"><span class="pre">locals()</span></code> 변수를 넘겨주어야 합니다. 그렇지 않으면 에러가 발생합니다.</p>
 </div>
-<dl class="simple">
-<dt><a class="reference internal" href="../session/fork_a_session.html#nsml-fork"><span class="std std-ref">nsml fork</span></a></dt><dd><p><a class="reference internal" href="nsml_load.html#nsml-load"><span class="std std-ref">nsml.load</span></a> 함수가 호출된 후 <a class="reference internal" href="#nsml.paused">nsml.paused</a> 함수는 끝납니다.</p>
-</dd>
-<dt><a class="reference internal" href="../session/submit_a_session.html#nsml-submit"><span class="std std-ref">nsml submit</span></a></dt><dd><p>test_data 를 evaluate 한 후에 결과는 nsml server 로
-전송되고 <a class="reference internal" href="../web_interface/leaderboard.html#leaderboard"><span class="std std-ref">leaderboard</span></a> 에 기록됩니다.</p>
-</dd>
+<dl class="docutils">
+<dt><a class="reference internal" href="../session/fork_a_session.html#nsml-fork"><span class="std std-ref">nsml fork</span></a></dt>
+<dd><a class="reference internal" href="nsml_load.html#nsml-load"><span class="std std-ref">nsml.load</span></a> 함수가 호출된 후 <a class="reference internal" href="#nsml.paused">nsml.paused</a> 함수는 끝납니다.</dd>
+<dt><a class="reference internal" href="../session/submit_a_session.html#nsml-submit"><span class="std std-ref">nsml submit</span></a></dt>
+<dd>test_data 를 evaluate 한 후에 결과는 nsml server 로
+전송되고 <a class="reference internal" href="../web_interface/leaderboard.html#leaderboard"><span class="std std-ref">leaderboard</span></a> 에 기록됩니다.</dd>
 </dl>
 <div class="admonition note">
-<p class="admonition-title">참고</p>
-<p><a class="reference internal" href="nsml_bind.html#nsml-bind"><span class="std std-ref">nsml.bind()</span></a> 가 호출된 후에 <a class="reference internal" href="#nsml-paused"><span class="std std-ref">nsml.paused()</span></a> 함수가 호출되어야 합니다.</p>
+<p class="first admonition-title">주석</p>
+<p class="last"><a class="reference internal" href="nsml_bind.html#nsml-bind"><span class="std std-ref">nsml.bind()</span></a> 가 호출된 후에 <a class="reference internal" href="#nsml-paused"><span class="std std-ref">nsml.paused()</span></a> 함수가 호출되어야 합니다.</p>
 </div>
 </dd></dl>
 

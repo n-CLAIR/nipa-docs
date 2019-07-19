@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Prepare a session environment &mdash; NSML  문서</title>
+  <title>Prepare a session environment &mdash; NSML  documentation</title>
   
 
   
@@ -194,9 +194,10 @@
 <div><p>session을 실행하기 전, 아래와 같은 방법으로 NSML server에서 실행될 code의 실행 환경을 설정해야 합니다.</p>
 <blockquote>
 <div><ul>
-<li><dl>
-<dt>pip로 install이 가능한 경우</dt><dd><p>setup.py 혹은 requirements.txt 파일에 아래와 같이 python library 를 기입합니다.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">distutils.core</span> <span class="kn">import</span> <span class="n">setup</span>
+<li><dl class="first docutils">
+<dt>pip로 install이 가능한 경우</dt>
+<dd><p class="first">setup.py 혹은 requirements.txt 파일에 아래와 같이 python library 를 기입합니다.</p>
+<div class="last highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">distutils.core</span> <span class="kn">import</span> <span class="n">setup</span>
 
 <span class="n">setup</span><span class="p">(</span>
     <span class="n">name</span><span class="o">=</span><span class="s1">&#39;ladder_networks&#39;</span><span class="p">,</span>
@@ -212,8 +213,9 @@
 </dd>
 </dl>
 </li>
-<li><dl>
-<dt>pip로 install이 불가능한 경우</dt><dd><p>docker로 실행 환경을 설정할 수 있습니다. setup.py 혹은 requirements.txt 상단에 <code class="docutils literal notranslate"><span class="pre">'#nsml:'</span></code> 를 붙여서 도커 image 이름을 적어주면 됩니다.</p>
+<li><dl class="first docutils">
+<dt>pip로 install이 불가능한 경우</dt>
+<dd><p class="first">docker로 실행 환경을 설정할 수 있습니다. setup.py 혹은 requirements.txt 상단에 <code class="docutils literal notranslate"><span class="pre">'#nsml:'</span></code> 를 붙여서 도커 image 이름을 적어주면 됩니다.</p>
 <p><code class="docutils literal notranslate"><span class="pre">setup.py</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#nsml: nsml/default_ml:cuda9</span>
 <span class="kn">from</span> <span class="nn">distutils.core</span> <span class="kn">import</span> <span class="n">setup</span>
@@ -237,26 +239,27 @@ pillow
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">참고</p>
-<p>만약 setup.py 와 requirements.txt가 둘 다 있으 setup.py 를 먼저 설치하고, requirements.txt 를 설치합니다.</p>
+<p class="first admonition-title">주석</p>
+<p class="last">만약 setup.py 와 requirements.txt가 둘 다 있으 setup.py 를 먼저 설치하고, requirements.txt 를 설치합니다.</p>
 </div>
-<div class="admonition note">
-<p class="admonition-title">참고</p>
-<p>docker 환경을 기재하지 않으면 <a class="reference external" href="https://nipa.nsml.navercorp.com/support">nsml/default_ml:latest</a> 를 사용합니다. (latest 버전은 계속 바뀔 수 있습니다.)</p>
+<div class="last admonition note">
+<p class="first admonition-title">주석</p>
+<p class="last">docker 환경을 기재하지 않으면 <a class="reference external" href="https://nipa.nsml.navercorp.com/support">nsml/default_ml:latest</a> 를 사용합니다. (latest 버전은 계속 바뀔 수 있습니다.)</p>
 </div>
 </dd>
 </dl>
 </li>
-<li><dl>
-<dt><code class="docutils literal notranslate"><span class="pre">apt-get</span></code> 으로 패키지를 설치해야 할 필요가 있을 경우</dt><dd><p><code class="docutils literal notranslate"><span class="pre">nsml_package.txt</span></code> 파일을 만들어서 필요한 라이브러리를 기재하면 설치됩니다.</p>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">apt-get</span></code> 으로 패키지를 설치해야 할 필요가 있을 경우</dt>
+<dd><p class="first"><code class="docutils literal notranslate"><span class="pre">nsml_package.txt</span></code> 파일을 만들어서 필요한 라이브러리를 기재하면 설치됩니다.</p>
 <p><code class="docutils literal notranslate"><span class="pre">nsml_package.txt</span></code></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget
 vim
 </pre></div>
 </div>
-<div class="admonition note">
-<p class="admonition-title">참고</p>
-<p>apt-get -y update &amp;&amp; apt-get -y install [package] 로 설치됩니다. 그 외에 설치하는데 더 많은 명령어가 필요한 경우, docker 환경을 새로 구성하시는 걸 추천합니다.</p>
+<div class="last admonition note">
+<p class="first admonition-title">주석</p>
+<p class="last">apt-get -y update &amp;&amp; apt-get -y install [package] 로 설치됩니다. 그 외에 설치하는데 더 많은 명령어가 필요한 경우, docker 환경을 새로 구성하시는 걸 추천합니다.</p>
 </div>
 </dd>
 </dl>

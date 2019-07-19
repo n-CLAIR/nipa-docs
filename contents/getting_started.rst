@@ -3,22 +3,6 @@
 Getting started
 ===============
 
-Sign-up
--------
-
-    https://nipa.nsml.navercorp.com/signup 에서 Github 계정으로 가입합니다.
-    모든 참가자는 Team 안에 속해 있어야 합니다. Team에 속한 사람들끼리 session을 공유할 수 있습니다.
-
-    .. note:: Github 계정과 Team 이름은 다음과 같은 규칙을 만족해야 합니다.
-
-        - Github username은 **5자리 이상** 으로 지정해야 합니다.
-        - Team 이름은 **대/소문자 영어 5~20자리, 특수문자는 “_” 만** 사용하여 지정해야 합니다.
-        - Team 이름과 동일한 Github username이 없어야 합니다. 모두 **다르게** 지정해야 합니다.
-
-    .. note:: **Github에서 Two-factor authentication을 해제해야 사용 가능합니다.**
-
-        (확인 방법 : Settings > Security > Two-factor authentication 체크)
-
 
 Install nsml
 ------------
@@ -52,13 +36,18 @@ Login
     NSML을 사용하기 위해선 로그인을 해야 합니다.
     Github 아이디와 비밀번호로 로그인합니다. 아래 소스 코드에서는 ``nsmlteam`` 을 Github 아이디로 사용하여 로그인하겠습니다.
 
+
+    .. note:: **Github에서 Two-factor authentication을 해제해야 사용 가능합니다.**
+
+        (확인 방법 : Settings > Security > Two-factor authentication 체크)
+
     .. code-block:: console
 
         $ nsml login
-        INFO[2019/07/19 04:32:38.667] connecting to nipa-cli.nsml.navercorp.com:18553
+        INFO[2019/07/18 16:05:38.667] connecting to nipa-cli.nsml.navercorp.com:18553
         GitHub Username: nsml-admin
         GitHub Password: ****************
-        INFO[2019/07/19 04:32:55.570] Welcome to NSML!
+        INFO[2019/07/18 16:05:55.570] Welcome to NSML!
 
 Path registration
 ------------------
@@ -116,20 +105,20 @@ Run a session
         Unpacking objects: 100% (48/48), done.
 
         $ nsml run -d mnist -e main.py
-        INFO[2019/01/02 16:11:20.959] .nsmlignore check - start
-        INFO[2019/01/02 16:11:20.959] .nsmlignore check - done
-        INFO[2019/01/02 16:11:20.996] file integrity check - start
-        INFO[2019/01/02 16:11:20.998] file integrity check - done
-        INFO[2019/01/02 16:11:21.001] .nsmlignore 16 B - start
-        INFO[2019/01/02 16:11:21.001] .nsmlignore 16 B - done (1/5 20.00%) (16 B/18 KiB 0.09%)
-        INFO[2019/01/02 16:11:21.001] README.md 9.1 KiB - start
-        INFO[2019/01/02 16:11:21.001] README.md 9.1 KiB - done (2/5 40.00%) (9.2 KiB/18 KiB 50.32%)
-        INFO[2019/01/02 16:11:21.001] data_loader.py 1.5 KiB - start
-        INFO[2019/01/02 16:11:21.002] data_loader.py 1.5 KiB - done (3/5 60.00%) (11 KiB/18 KiB 58.57%)
-        INFO[2019/01/02 16:11:21.002] main.py 7.3 KiB - start
-        INFO[2019/01/02 16:11:21.002] main.py 7.3 KiB - done (4/5 80.00%) (18 KiB/18 KiB 98.81%)
-        INFO[2019/01/02 16:11:21.002] setup.py 221 B - start
-        INFO[2019/01/02 16:11:21.002] setup.py 221 B - done (5/5 100.00%) (18 KiB/18 KiB 100.00%)
+        INFO[2019/07/18 16:11:20.959] .nsmlignore check - start
+        INFO[2019/07/18 16:11:20.959] .nsmlignore check - done
+        INFO[2019/07/18 16:11:20.996] file integrity check - start
+        INFO[2019/07/18 16:11:20.998] file integrity check - done
+        INFO[2019/07/18 16:11:21.001] .nsmlignore 16 B - start
+        INFO[2019/07/18 16:11:21.001] .nsmlignore 16 B - done (1/5 20.00%) (16 B/18 KiB 0.09%)
+        INFO[2019/07/18 16:11:21.001] README.md 9.1 KiB - start
+        INFO[2019/07/18 16:11:21.001] README.md 9.1 KiB - done (2/5 40.00%) (9.2 KiB/18 KiB 50.32%)
+        INFO[2019/07/18 16:11:21.001] data_loader.py 1.5 KiB - start
+        INFO[2019/07/18 16:11:21.002] data_loader.py 1.5 KiB - done (3/5 60.00%) (11 KiB/18 KiB 58.57%)
+        INFO[2019/07/18 16:11:21.002] main.py 7.3 KiB - start
+        INFO[2019/07/18 16:11:21.002] main.py 7.3 KiB - done (4/5 80.00%) (18 KiB/18 KiB 98.81%)
+        INFO[2019/07/18 16:11:21.002] setup.py 221 B - start
+        INFO[2019/07/18 16:11:21.002] setup.py 221 B - done (5/5 100.00%) (18 KiB/18 KiB 100.00%)
         .....
         Building docker image. It might take for a while
         ......

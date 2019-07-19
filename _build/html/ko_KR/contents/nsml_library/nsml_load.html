@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>nsml.load &mdash; NSML  문서</title>
+  <title>nsml.load &mdash; NSML  documentation</title>
   
 
   
@@ -184,25 +184,28 @@
 <span id="id1"></span><h1>nsml.load<a class="headerlink" href="#nsml-load" title="제목 주소">¶</a></h1>
 <dl class="function">
 <dt id="nsml.load">
-<code class="sig-prename descclassname">nsml.</code><code class="sig-name descname">load</code><span class="sig-paren">(</span><em class="sig-param">checkpoint</em>, <em class="sig-param">load_fn=None</em>, <em class="sig-param">session=None</em><span class="sig-paren">)</span><a class="headerlink" href="#nsml.load" title="정의 주소">¶</a></dt>
+<code class="descclassname">nsml.</code><code class="descname">load</code><span class="sig-paren">(</span><em>checkpoint</em>, <em>load_fn=None</em>, <em>session=None</em><span class="sig-paren">)</span><a class="headerlink" href="#nsml.load" title="정의 주소">¶</a></dt>
 <dd><blockquote>
-<div><p>저장된 모델을 불러옵니다. <a class="reference internal" href="nsml_bind.html#nsml-bind"><span class="std std-ref">nsml.bind()</span></a> 함수에서는 load 함수를 정의만 합니다.</p>
-</div></blockquote>
-<dl class="field-list simple">
-<dt class="field-odd">매개변수</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>checkpoint</strong> (<em>str</em>) -- session 의 호출할 checkpoint을 정의합니다.</p></li>
-<li><p><strong>load_fn</strong> (<em>fn</em>) -- <p>모델을 load 하는 방법이 정의된 함수를 인수로 받습니다. load 함수가 호출되는 우선순위는</p>
-<ol class="arabic simple">
-<li><p>이 함수로 전달된 load_fn</p></li>
-<li><p>nsml.bind() 에 binding 된 load 함수</p></li>
-<li><p>nsml 에서 정의한 default load 함수입니다.</p></li>
+<div>저장된 모델을 불러옵니다. <a class="reference internal" href="nsml_bind.html#nsml-bind"><span class="std std-ref">nsml.bind()</span></a> 함수에서는 load 함수를 정의만 합니다.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">매개 변수:</th><td class="field-body"><ul class="first last simple">
+<li><strong>checkpoint</strong> (<em>str</em>) -- session 의 호출할 checkpoint을 정의합니다.</li>
+<li><strong>load_fn</strong> (<em>fn</em>) -- <p>모델을 load 하는 방법이 정의된 함수를 인수로 받습니다. load 함수가 호출되는 우선순위는</p>
+<ol class="arabic">
+<li>이 함수로 전달된 load_fn</li>
+<li>nsml.bind() 에 binding 된 load 함수</li>
+<li>nsml 에서 정의한 default load 함수입니다.</li>
 </ol>
-</p></li>
-<li><p><strong>session</strong> (<em>str</em>) -- 해당 session name 에서 저장된 model 을 불러옵니다.</p></li>
+</li>
+<li><strong>session</strong> (<em>str</em>) -- 해당 session name 에서 저장된 model 을 불러옵니다.</li>
 </ul>
-</dd>
-</dl>
+</td>
+</tr>
+</tbody>
+</table>
 <p>Example</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="o">...</span>

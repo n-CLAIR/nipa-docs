@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Delete a model &mdash; NSML  문서</title>
+  <title>Delete a model &mdash; NSML  documentation</title>
   
 
   
@@ -188,26 +188,28 @@
   <div class="section" id="delete-a-model">
 <span id="nsml-model-rm"></span><h1>Delete a model<a class="headerlink" href="#delete-a-model" title="제목 주소">¶</a></h1>
 <blockquote>
-<div><dl>
-<dt>Usage:</dt><dd><table class="docutils align-default">
+<div><dl class="docutils">
+<dt>Usage:</dt>
+<dd><table border="1" class="first last docutils">
 <colgroup>
-<col style="width: 100%" />
+<col width="100%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><p><strong>nsml model rm</strong> SESSION_NAME <em>CHECKPOINT</em></p></td>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>nsml model rm</strong> SESSION_NAME <em>CHECKPOINT</em></td>
 </tr>
 </tbody>
 </table>
 </dd>
-<dt>Description:</dt><dd><p>하나 또는 여러 개의 model 을 삭제합니다. 생성된 CHECKPOINT 번호를 입력합니다.</p>
-</dd>
-<dt>Example:</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">nsml model rm nsmlteam/mnist/4 24</span>
+<dt>Description:</dt>
+<dd>하나 또는 여러 개의 model 을 삭제합니다. 생성된 CHECKPOINT 번호를 입력합니다.</dd>
+<dt>Example:</dt>
+<dd><div class="first highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">nsml model rm nsmlteam/mnist/4 24</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">nsml model rm nsmlteam/mnist/4 &quot;24&quot;</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> nsml model ls nsmlteam/mnist/4
+<div class="last highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> nsml model ls nsmlteam/mnist/4
 <span class="go">Checkpoint    Last Modified    Elapsed    Summary                                                                    Size</span>
 <span class="go">------------  ---------------  ---------  -------------------------------------------------------------------------  ---------</span>
 <span class="go">0             32 minutes ago   3.785      epoch=0, loss=7.015200052175436, epoch_total=5, acc=0.0021114864864864866  366.74 MB</span>

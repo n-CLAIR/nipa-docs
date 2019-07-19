@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Submit a session &mdash; NSML  문서</title>
+  <title>Submit a session &mdash; NSML  documentation</title>
   
 
   
@@ -188,44 +188,53 @@
   <div class="section" id="submit-a-session">
 <span id="nsml-submit"></span><h1>Submit a session<a class="headerlink" href="#submit-a-session" title="제목 주소">¶</a></h1>
 <blockquote>
-<div><dl>
-<dt>Usage:</dt><dd><table class="docutils align-default">
+<div><dl class="docutils">
+<dt>Usage:</dt>
+<dd><table border="1" class="first docutils">
 <colgroup>
-<col style="width: 100%" />
+<col width="100%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><p><strong>nsml submit</strong> <em>Options</em> SESSION_NAME <em>CHECKPOINT</em></p></td>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>nsml submit</strong> <em>Options</em> SESSION_NAME <em>CHECKPOINT</em></td>
 </tr>
 </tbody>
 </table>
-<p>session 을 submit 하여서 leaderboard 에 점수를 제출합니다. 하루에 submit 횟수는 제한이 없습니다. 다만 submit을 한 번 했다면 1시간 후에 다시 submit이 가능합니다. 즉, submit 시간 간격은 1시간이 넘어야 합니다. (단, -t 옵션을 사용하는 submit은 submit 시간 간격 카운트에 포함되지 않습니다.)</p>
+<p class="last">session 을 submit 하여서 leaderboard 에 점수를 제출합니다. 하루에 submit 횟수는 제한이 없습니다. 다만 submit을 한 번 했다면 1시간 후에 다시 submit이 가능합니다. 즉, submit 시간 간격은 1시간이 넘어야 합니다. (단, -t 옵션을 사용하는 submit은 submit 시간 간격 카운트에 포함되지 않습니다.)</p>
 </dd>
-<dt>Example:</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">nsml submit nsmlteam/mnist/4 32</span>
+<dt>Example:</dt>
+<dd><div class="first highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">nsml submit nsmlteam/mnist/4 32</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">nsml submit -t nsmlteam/mnist/4 32</span>
+<div class="last highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">nsml submit -t nsmlteam/mnist/4 32</span>
 </pre></div>
 </div>
 </dd>
-<dt>Options:</dt><dd><dl class="option-list">
-<dt><kbd><span class="option">-t</span>, <span class="option">--test</span></kbd></dt>
-<dd><p>실제로 점수를 제출하기 전, 데이터의 포맷 오류나 기타 버그들을 찾기 위해</p>
+<dt>Options:</dt>
+<dd><table class="first last docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group">
+<kbd><span class="option">-t</span>, <span class="option">--test</span></kbd></td>
+<td><p class="first">실제로 점수를 제출하기 전, 데이터의 포맷 오류나 기타 버그들을 찾기 위해</p>
 <p>지원하는 debug 모드(test 모드)로 session 을 제출합니다.</p>
 <p>test 모드로 제출 후 session이 새로 생기면 <a class="reference internal" href="get_a_log_from_session.html#nsml-logs"><span class="std std-ref">logs</span></a> 를 보고</p>
-<p>debugging 을 할 수 있습니다.</p>
+<p class="last">debugging 을 할 수 있습니다.</p>
+</td></tr>
+</tbody>
+</table>
 </dd>
-</dl>
-</dd>
-<dt>Troubleshooting:</dt><dd><p>submit 도중에</p>
+<dt>Troubleshooting:</dt>
+<dd><p class="first">submit 도중에</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Error: Submit/infer session is stopped right after runnig. Please check your code again</span>
 </pre></div>
 </div>
 <p>위와 같은 메시지가 나타난다면, <a class="reference internal" href="../nsml_library/nsml_paused.html#nsml-paused"><span class="std std-ref">nsml.paused()</span></a> 가 호출되기 전에 에러가 발생한 것으로, 크게 두 가지로 나눌 수 있습니다.</p>
 <ol class="arabic simple">
-<li><p><a class="reference internal" href="../nsml_library/nsml_paused.html#nsml-paused"><span class="std std-ref">nsml.paused()</span></a> 호출되기 전 test_data 또는 test_label에 접근하는 경우</p></li>
-<li><p><a class="reference internal" href="../nsml_library/nsml_load.html#nsml-load"><span class="std std-ref">nsml.load()</span></a> 도중 에러가 난 경우</p></li>
+<li><a class="reference internal" href="../nsml_library/nsml_paused.html#nsml-paused"><span class="std std-ref">nsml.paused()</span></a> 호출되기 전 test_data 또는 test_label에 접근하는 경우</li>
+<li><a class="reference internal" href="../nsml_library/nsml_load.html#nsml-load"><span class="std std-ref">nsml.load()</span></a> 도중 에러가 난 경우</li>
 </ol>
-<p>위와 같은 문제가 발생할 때는 <a class="reference internal" href="#nsml-submit"><span class="std std-ref">nsml submit -t SESSION CKPT</span></a> 를 통해서 디버깅을 할 수 있습니다.</p>
+<p class="last">위와 같은 문제가 발생할 때는 <a class="reference internal" href="#nsml-submit"><span class="std std-ref">nsml submit -t SESSION CKPT</span></a> 를 통해서 디버깅을 할 수 있습니다.</p>
 </dd>
 </dl>
 </div></blockquote>

@@ -17,20 +17,20 @@ Load a model in a session
         README.md      data_loader.py main.py        setup.py
 
         $ nsml run -d mnist
-        INFO[2019/01/10 15:06:04.170] .nsmlignore check - start
-        INFO[2019/01/10 15:06:04.170] .nsmlignore check - done
-        INFO[2019/01/10 15:06:04.235] file integrity check - start
-        INFO[2019/01/10 15:06:04.237] file integrity check - done
-        INFO[2019/01/10 15:06:04.238] .nsmlignore 16 B - start
-        INFO[2019/01/10 15:06:04.238] .nsmlignore 16 B - done (1/5 20.00%) (16 B/18 KiB 0.09%)
-        INFO[2019/01/10 15:06:04.238] README.md 9.1 KiB - start
-        INFO[2019/01/10 15:06:04.239] README.md 9.1 KiB - done (2/5 40.00%) (9.2 KiB/18 KiB 50.32%)
-        INFO[2019/01/10 15:06:04.239] data_loader.py 1.5 KiB - start
-        INFO[2019/01/10 15:06:04.239] data_loader.py 1.5 KiB - done (3/5 60.00%) (11 KiB/18 KiB 58.57%)
-        INFO[2019/01/10 15:06:04.239] main.py 7.3 KiB - start
-        INFO[2019/01/10 15:06:04.239] main.py 7.3 KiB - done (4/5 80.00%) (18 KiB/18 KiB 98.81%)
-        INFO[2019/01/10 15:06:04.239] setup.py 221 B - start
-        INFO[2019/01/10 15:06:04.239] setup.py 221 B - done (5/5 100.00%) (18 KiB/18 KiB 100.00%)
+        INFO[2019/07/19 15:06:04.170] .nsmlignore check - start
+        INFO[2019/07/19 15:06:04.170] .nsmlignore check - done
+        INFO[2019/07/19 15:06:04.235] file integrity check - start
+        INFO[2019/07/19 15:06:04.237] file integrity check - done
+        INFO[2019/07/19 15:06:04.238] .nsmlignore 16 B - start
+        INFO[2019/07/19 15:06:04.238] .nsmlignore 16 B - done (1/5 20.00%) (16 B/18 KiB 0.09%)
+        INFO[2019/07/19 15:06:04.238] README.md 9.1 KiB - start
+        INFO[2019/07/19 15:06:04.239] README.md 9.1 KiB - done (2/5 40.00%) (9.2 KiB/18 KiB 50.32%)
+        INFO[2019/07/19 15:06:04.239] data_loader.py 1.5 KiB - start
+        INFO[2019/07/19 15:06:04.239] data_loader.py 1.5 KiB - done (3/5 60.00%) (11 KiB/18 KiB 58.57%)
+        INFO[2019/07/19 15:06:04.239] main.py 7.3 KiB - start
+        INFO[2019/07/19 15:06:04.239] main.py 7.3 KiB - done (4/5 80.00%) (18 KiB/18 KiB 98.81%)
+        INFO[2019/07/19 15:06:04.239] setup.py 221 B - start
+        INFO[2019/07/19 15:06:04.239] setup.py 221 B - done (5/5 100.00%) (18 KiB/18 KiB 100.00%)
         .....
         Building docker image. It might take for a while
         ......
@@ -92,20 +92,20 @@ Load a model in a session
     .. code-block:: console
 
         $ nsml run -d mnist
-        INFO[2019/01/10 15:10:10.803] .nsmlignore check - start
-        INFO[2019/01/10 15:10:10.804] .nsmlignore check - done
-        INFO[2019/01/10 15:10:10.942] file integrity check - start
-        INFO[2019/01/10 15:10:10.944] file integrity check - done
-        INFO[2019/01/10 15:10:10.946] .nsmlignore 16 B - start
-        INFO[2019/01/10 15:10:10.946] .nsmlignore 16 B - done (1/5 20.00%) (16 B/18 KiB 0.09%)
-        INFO[2019/01/10 15:10:10.946] README.md 9.1 KiB - start
-        INFO[2019/01/10 15:10:10.946] README.md 9.1 KiB - done (2/5 40.00%) (9.2 KiB/18 KiB 50.02%)
-        INFO[2019/01/10 15:10:10.946] data_loader.py 1.5 KiB - start
-        INFO[2019/01/10 15:10:10.947] data_loader.py 1.5 KiB - done (3/5 60.00%) (11 KiB/18 KiB 58.23%)
-        INFO[2019/01/10 15:10:10.947] main.py 7.4 KiB - start
-        INFO[2019/01/10 15:10:10.947] main.py 7.4 KiB - done (4/5 80.00%) (18 KiB/18 KiB 98.82%)
-        INFO[2019/01/10 15:10:10.947] setup.py 221 B - start
-        INFO[2019/01/10 15:10:10.947] setup.py 221 B - done (5/5 100.00%) (18 KiB/18 KiB 100.00%)
+        INFO[2019/07/19 15:10:10.803] .nsmlignore check - start
+        INFO[2019/07/19 15:10:10.804] .nsmlignore check - done
+        INFO[2019/07/19 15:10:10.942] file integrity check - start
+        INFO[2019/07/19 15:10:10.944] file integrity check - done
+        INFO[2019/07/19 15:10:10.946] .nsmlignore 16 B - start
+        INFO[2019/07/19 15:10:10.946] .nsmlignore 16 B - done (1/5 20.00%) (16 B/18 KiB 0.09%)
+        INFO[2019/07/19 15:10:10.946] README.md 9.1 KiB - start
+        INFO[2019/07/19 15:10:10.946] README.md 9.1 KiB - done (2/5 40.00%) (9.2 KiB/18 KiB 50.02%)
+        INFO[2019/07/19 15:10:10.946] data_loader.py 1.5 KiB - start
+        INFO[2019/07/19 15:10:10.947] data_loader.py 1.5 KiB - done (3/5 60.00%) (11 KiB/18 KiB 58.23%)
+        INFO[2019/07/19 15:10:10.947] main.py 7.4 KiB - start
+        INFO[2019/07/19 15:10:10.947] main.py 7.4 KiB - done (4/5 80.00%) (18 KiB/18 KiB 98.82%)
+        INFO[2019/07/19 15:10:10.947] setup.py 221 B - start
+        INFO[2019/07/19 15:10:10.947] setup.py 221 B - done (5/5 100.00%) (18 KiB/18 KiB 100.00%)
         .....
         Building docker image. It might take for a while
         ......

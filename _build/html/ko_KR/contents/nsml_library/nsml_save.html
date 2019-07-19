@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>nsml.save &mdash; NSML  문서</title>
+  <title>nsml.save &mdash; NSML  documentation</title>
   
 
   
@@ -184,26 +184,30 @@
 <span id="id1"></span><h1>nsml.save<a class="headerlink" href="#nsml-save" title="제목 주소">¶</a></h1>
 <dl class="function">
 <dt id="nsml.save">
-<code class="sig-prename descclassname">nsml.</code><code class="sig-name descname">save</code><span class="sig-paren">(</span><em class="sig-param">checkpoint=None</em>, <em class="sig-param">save_fn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#nsml.save" title="정의 주소">¶</a></dt>
+<code class="descclassname">nsml.</code><code class="descname">save</code><span class="sig-paren">(</span><em>checkpoint=None</em>, <em>save_fn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#nsml.save" title="정의 주소">¶</a></dt>
 <dd><p>모델을 저장합니다. <a class="reference internal" href="nsml_bind.html#nsml-bind"><span class="std std-ref">nsml.bind()</span></a> 함수에서는 save 함수를 정의만 합니다.</p>
-<dl class="field-list simple">
-<dt class="field-odd">매개변수</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>str</strong> -- <p>매 checkpoint 마다 저장될 모델의 구분을 위해 값을 받습니다.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">매개 변수:</th><td class="field-body"><ul class="first last simple">
+<li><strong>str</strong> -- <p>매 checkpoint 마다 저장될 모델의 구분을 위해 값을 받습니다.</p>
 <p>checkpoint 값으로 내부적으로 모델을 구분합니다.
 checkpoint 이 None 일때는 현재 시각의 이름으로 모델이 저장됩니다.
 똑같은 checkpoint 을 두번 저장하면 overwrite 됩니다.</p>
-</p></li>
-<li><p><strong>save_fn</strong> (<em>fn</em>) -- <p>모델을 저장하는 방법이 정의된 함수를 인수로 받습니다. save 함수가 호출되는 우선순위는</p>
-<ol class="arabic simple">
-<li><p>이 함수로 전달된 save_fn</p></li>
-<li><p>nsml.bind() 에 binding 된 save 함수</p></li>
-<li><p>NSML 에서 정의된 default save 함수입니다.</p></li>
+</li>
+<li><strong>save_fn</strong> (<em>fn</em>) -- <p>모델을 저장하는 방법이 정의된 함수를 인수로 받습니다. save 함수가 호출되는 우선순위는</p>
+<ol class="arabic">
+<li>이 함수로 전달된 save_fn</li>
+<li>nsml.bind() 에 binding 된 save 함수</li>
+<li>NSML 에서 정의된 default save 함수입니다.</li>
 </ol>
-</p></li>
+</li>
 </ul>
-</dd>
-</dl>
+</td>
+</tr>
+</tbody>
+</table>
 <p>Example</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">save</span><span class="p">(</span><span class="n">dir_path</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
     <span class="n">torch</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="nb">object</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dir_path</span><span class="p">,</span><span class="s1">&#39;model.pth&#39;</span><span class="p">))</span>

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Getting started &mdash; NSML  문서</title>
+  <title>Getting started &mdash; NSML  documentation</title>
   
 
   
@@ -83,7 +83,6 @@
             
               <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Getting started</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#sign-up">Sign-up</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#install-nsml">Install nsml</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#install-local-nsml">Install local-nsml</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#login">Login</a></li>
@@ -178,27 +177,6 @@
             
   <div class="section" id="getting-started">
 <span id="id1"></span><h1>Getting started<a class="headerlink" href="#getting-started" title="제목 주소">¶</a></h1>
-<div class="section" id="sign-up">
-<h2>Sign-up<a class="headerlink" href="#sign-up" title="제목 주소">¶</a></h2>
-<blockquote>
-<div><p><a class="reference external" href="https://nipa.nsml.navercorp.com/signup">https://nipa.nsml.navercorp.com/signup</a> 에서 Github 계정으로 가입합니다.
-모든 참가자는 Team 안에 속해 있어야 합니다. Team에 속한 사람들끼리 session을 공유할 수 있습니다.</p>
-<div class="admonition note">
-<p class="admonition-title">참고</p>
-<p>Github 계정과 Team 이름은 다음과 같은 규칙을 만족해야 합니다.</p>
-<ul class="simple">
-<li><p>Github username은 <strong>5자리 이상</strong> 으로 지정해야 합니다.</p></li>
-<li><p>Team 이름은 <strong>대/소문자 영어 5~20자리, 특수문자는 “_” 만</strong> 사용하여 지정해야 합니다.</p></li>
-<li><p>Team 이름과 동일한 Github username이 없어야 합니다. 모두 <strong>다르게</strong> 지정해야 합니다.</p></li>
-</ul>
-</div>
-<div class="admonition note">
-<p class="admonition-title">참고</p>
-<p><strong>Github에서 Two-factor authentication을 해제해야 사용 가능합니다.</strong></p>
-<p>(확인 방법 : Settings &gt; Security &gt; Two-factor authentication 체크)</p>
-</div>
-</div></blockquote>
-</div>
 <div class="section" id="install-nsml">
 <h2>Install nsml<a class="headerlink" href="#install-nsml" title="제목 주소">¶</a></h2>
 <blockquote>
@@ -212,9 +190,9 @@
 <div class="section" id="install-local-nsml">
 <h2>Install local-nsml<a class="headerlink" href="#install-local-nsml" title="제목 주소">¶</a></h2>
 <blockquote>
-<div><dl class="simple">
-<dt>What is a local-nsml?</dt><dd><p>NSML에 올리는 코드를 로컬 환경에서 디버깅할 때, NSML의 라이브러리에 대해서 생기는 <cite>ImportError</cite> 를 방지하기 위한 파이썬 패키지입니다.</p>
-</dd>
+<div><dl class="docutils">
+<dt>What is a local-nsml?</dt>
+<dd>NSML에 올리는 코드를 로컬 환경에서 디버깅할 때, NSML의 라이브러리에 대해서 생기는 <cite>ImportError</cite> 를 방지하기 위한 파이썬 패키지입니다.</dd>
 </dl>
 <p>pip가 이미 설치되어 있다는 전제 하에, 아래 명령어를 입력하면 됩니다.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">pip install git+https://github.com/n-CLAIR/nsml-local</span>
@@ -227,11 +205,16 @@
 <blockquote>
 <div><p>NSML을 사용하기 위해선 로그인을 해야 합니다.
 Github 아이디와 비밀번호로 로그인합니다. 아래 소스 코드에서는 <code class="docutils literal notranslate"><span class="pre">nsmlteam</span></code> 을 Github 아이디로 사용하여 로그인하겠습니다.</p>
+<div class="admonition note">
+<p class="first admonition-title">주석</p>
+<p><strong>Github에서 Two-factor authentication을 해제해야 사용 가능합니다.</strong></p>
+<p class="last">(확인 방법 : Settings &gt; Security &gt; Two-factor authentication 체크)</p>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> nsml login
-<span class="go">INFO[2019/07/19 04:32:38.667] connecting to nipa-cli.nsml.navercorp.com:18553</span>
+<span class="go">INFO[2019/07/18 16:05:38.667] connecting to nipa-cli.nsml.navercorp.com:18553</span>
 <span class="go">GitHub Username: nsml-admin</span>
 <span class="go">GitHub Password: ****************</span>
-<span class="go">INFO[2019/07/19 04:32:55.570] Welcome to NSML!</span>
+<span class="go">INFO[2019/07/18 16:05:55.570] Welcome to NSML!</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -278,20 +261,20 @@ pwd로 <code class="docutils literal notranslate"><span class="pre">/Users/user/
 <span class="go">Unpacking objects: 100% (48/48), done.</span>
 
 <span class="gp">$</span> nsml run -d mnist -e main.py
-<span class="go">INFO[2019/01/02 16:11:20.959] .nsmlignore check - start</span>
-<span class="go">INFO[2019/01/02 16:11:20.959] .nsmlignore check - done</span>
-<span class="go">INFO[2019/01/02 16:11:20.996] file integrity check - start</span>
-<span class="go">INFO[2019/01/02 16:11:20.998] file integrity check - done</span>
-<span class="go">INFO[2019/01/02 16:11:21.001] .nsmlignore 16 B - start</span>
-<span class="go">INFO[2019/01/02 16:11:21.001] .nsmlignore 16 B - done (1/5 20.00%) (16 B/18 KiB 0.09%)</span>
-<span class="go">INFO[2019/01/02 16:11:21.001] README.md 9.1 KiB - start</span>
-<span class="go">INFO[2019/01/02 16:11:21.001] README.md 9.1 KiB - done (2/5 40.00%) (9.2 KiB/18 KiB 50.32%)</span>
-<span class="go">INFO[2019/01/02 16:11:21.001] data_loader.py 1.5 KiB - start</span>
-<span class="go">INFO[2019/01/02 16:11:21.002] data_loader.py 1.5 KiB - done (3/5 60.00%) (11 KiB/18 KiB 58.57%)</span>
-<span class="go">INFO[2019/01/02 16:11:21.002] main.py 7.3 KiB - start</span>
-<span class="go">INFO[2019/01/02 16:11:21.002] main.py 7.3 KiB - done (4/5 80.00%) (18 KiB/18 KiB 98.81%)</span>
-<span class="go">INFO[2019/01/02 16:11:21.002] setup.py 221 B - start</span>
-<span class="go">INFO[2019/01/02 16:11:21.002] setup.py 221 B - done (5/5 100.00%) (18 KiB/18 KiB 100.00%)</span>
+<span class="go">INFO[2019/07/18 16:11:20.959] .nsmlignore check - start</span>
+<span class="go">INFO[2019/07/18 16:11:20.959] .nsmlignore check - done</span>
+<span class="go">INFO[2019/07/18 16:11:20.996] file integrity check - start</span>
+<span class="go">INFO[2019/07/18 16:11:20.998] file integrity check - done</span>
+<span class="go">INFO[2019/07/18 16:11:21.001] .nsmlignore 16 B - start</span>
+<span class="go">INFO[2019/07/18 16:11:21.001] .nsmlignore 16 B - done (1/5 20.00%) (16 B/18 KiB 0.09%)</span>
+<span class="go">INFO[2019/07/18 16:11:21.001] README.md 9.1 KiB - start</span>
+<span class="go">INFO[2019/07/18 16:11:21.001] README.md 9.1 KiB - done (2/5 40.00%) (9.2 KiB/18 KiB 50.32%)</span>
+<span class="go">INFO[2019/07/18 16:11:21.001] data_loader.py 1.5 KiB - start</span>
+<span class="go">INFO[2019/07/18 16:11:21.002] data_loader.py 1.5 KiB - done (3/5 60.00%) (11 KiB/18 KiB 58.57%)</span>
+<span class="go">INFO[2019/07/18 16:11:21.002] main.py 7.3 KiB - start</span>
+<span class="go">INFO[2019/07/18 16:11:21.002] main.py 7.3 KiB - done (4/5 80.00%) (18 KiB/18 KiB 98.81%)</span>
+<span class="go">INFO[2019/07/18 16:11:21.002] setup.py 221 B - start</span>
+<span class="go">INFO[2019/07/18 16:11:21.002] setup.py 221 B - done (5/5 100.00%) (18 KiB/18 KiB 100.00%)</span>
 <span class="go">.....</span>
 <span class="go">Building docker image. It might take for a while</span>
 <span class="go">......</span>

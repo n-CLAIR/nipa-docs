@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Model Capacity Management &mdash; NSML  문서</title>
+  <title>Model Capacity Management &mdash; NSML  documentation</title>
   
 
   
@@ -181,12 +181,12 @@
 <div class="section" id="step-1">
 <h2>Step 1. 삭제할 모델 조회하기<a class="headerlink" href="#step-1" title="제목 주소">¶</a></h2>
 <blockquote>
-<div><table class="docutils align-default">
+<div><table border="1" class="docutils">
 <colgroup>
-<col style="width: 100%" />
+<col width="100%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><p><strong>nsml model ls</strong> SESSION_NAME</p></td>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>nsml model ls</strong> SESSION_NAME</td>
 </tr>
 </tbody>
 </table>
@@ -210,12 +210,12 @@
 <div class="section" id="step-2">
 <h2>Step 2. 모델 삭제하기 &amp; 확인하기<a class="headerlink" href="#step-2" title="제목 주소">¶</a></h2>
 <blockquote>
-<div><table class="docutils align-default">
+<div><table border="1" class="docutils">
 <colgroup>
-<col style="width: 100%" />
+<col width="100%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><p><strong>nsml model rm</strong> SESSION_NAME <em>CHECKPOINT</em></p></td>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>nsml model rm</strong> SESSION_NAME <em>CHECKPOINT</em></td>
 </tr>
 </tbody>
 </table>
@@ -224,7 +224,7 @@
 <p>Example:</p>
 <blockquote>
 <div><div class="literal-block-wrapper docutils container" id="id1">
-<div class="code-block-caption"><span class="caption-text">해당 세션에 있는 모델 모두 삭제하기</span><a class="headerlink" href="#id1" title="이 코드에 대한 퍼머링크">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">해당 세션에 있는 모델 모두 삭제하기</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> nsml model rm nsmlteam/mnist/4 <span class="s2">&quot;*&quot;</span>
 <span class="gp">$</span> nsml model ls nsmlteam/mnist/4
 <span class="go">Checkpoint    Last Modified    Elapsed    Summary                         Size</span>
@@ -233,7 +233,7 @@
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id2">
-<div class="code-block-caption"><span class="caption-text">session에 있는 1번부터 35번 model을 전부 bash script로 삭제하기</span><a class="headerlink" href="#id2" title="이 코드에 대한 퍼머링크">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">session에 있는 1번부터 35번 model을 전부 bash script로 삭제하기</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="k">for</span> i in <span class="sb">`</span>seq <span class="m">1</span> <span class="m">35</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span> nsml model rm nsmlteam/mnist/<span class="nv">$i</span> <span class="s2">&quot;*&quot;</span> <span class="p">;</span> <span class="k">done</span>
 <span class="gp">$</span> nsml model ls nsmlteam/mnist/35
 <span class="go">Checkpoint    Last Modified    Elapsed    Summary                         Size</span>
@@ -242,7 +242,7 @@
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id3">
-<div class="code-block-caption"><span class="caption-text">1개 삭제하기</span><a class="headerlink" href="#id3" title="이 코드에 대한 퍼머링크">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">1개 삭제하기</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> nsml model rm nsmlteam/mnist/4 <span class="m">0</span>
 <span class="gp">$</span> nsml model ls nsmlteam/mnist/4
 <span class="go">Checkpoint    Last Modified    Elapsed    Summary                         Size</span>

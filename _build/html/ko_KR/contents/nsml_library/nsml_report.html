@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>nsml.report &mdash; NSML  문서</title>
+  <title>nsml.report &mdash; NSML  documentation</title>
   
 
   
@@ -184,23 +184,27 @@
 <span id="id1"></span><h1>nsml.report<a class="headerlink" href="#nsml-report" title="제목 주소">¶</a></h1>
 <dl class="function">
 <dt id="nsml.report">
-<code class="sig-prename descclassname">nsml.</code><code class="sig-name descname">report</code><span class="sig-paren">(</span><em class="sig-param">summary=False</em>, <em class="sig-param">scope=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#nsml.report" title="정의 주소">¶</a></dt>
+<code class="descclassname">nsml.</code><code class="descname">report</code><span class="sig-paren">(</span><em>summary=False</em>, <em>scope=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#nsml.report" title="정의 주소">¶</a></dt>
 <dd><p>변수의 변화량을 기록하여서 web 에서 scalar, tensorboard, visdom 에 그래프를 그릴 때 사용됩니다.</p>
-<dl class="field-list simple">
-<dt class="field-odd">매개변수</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>summary</strong> (<em>bool</em><em> or </em><em>None</em>) -- 값이 True이면, <a class="reference internal" href="../session/show_sessions.html#nsml-ps"><span class="std std-ref">nsml ps</span></a> 에 값이 보입니다.</p></li>
-<li><p><strong>scope</strong> -- <cite>locals()</cite> 로 값을 주면, 해당 범위의 값에 <a class="reference internal" href="../session/access_to_a_session_for_repl.html#nsml-exec"><span class="std std-ref">nsml exec</span></a> 으로 접근할 수 있습니다. 또는 python 의 eval
-로 세션에 접근할 수 있습니다.</p></li>
-<li><p><strong>step</strong> -- scalar 그래프에서 보여줄 x 축 값을 설정합니다.</p></li>
-<li><p><strong>**kwargs</strong> (<em>str</em><em> or </em><em>None</em>) -- 트래킹할 변수를 key=value 형식으로 입력합니다. (ex. loss=loss)
-(walltime key 값은 내부에서 자동으로 time.time() 으로 설정되므로 만약 walltime=variable 로 값을 넘겨질 경우 time.time() 의 값으로 overwrite됩니다.)</p></li>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">매개 변수:</th><td class="field-body"><ul class="first simple">
+<li><strong>summary</strong> (<em>bool</em><em> or </em><em>None</em>) -- 값이 True이면, <a class="reference internal" href="../session/show_sessions.html#nsml-ps"><span class="std std-ref">nsml ps</span></a> 에 값이 보입니다.</li>
+<li><strong>scope</strong> -- <cite>locals()</cite> 로 값을 주면, 해당 범위의 값에 <a class="reference internal" href="../session/access_to_a_session_for_repl.html#nsml-exec"><span class="std std-ref">nsml exec</span></a> 으로 접근할 수 있습니다. 또는 python 의 eval
+로 세션에 접근할 수 있습니다.</li>
+<li><strong>step</strong> -- scalar 그래프에서 보여줄 x 축 값을 설정합니다.</li>
+<li><strong>**kwargs</strong> (<em>str</em><em> or </em><em>None</em>) -- 트래킹할 변수를 key=value 형식으로 입력합니다. (ex. loss=loss)
+(walltime key 값은 내부에서 자동으로 time.time() 으로 설정되므로 만약 walltime=variable 로 값을 넘겨질 경우 time.time() 의 값으로 overwrite됩니다.)</li>
 </ul>
-</dd>
-<dt class="field-even">예외</dt>
-<dd class="field-even"><p><strong>TypeError</strong> -- 트래킹할 변수에 json serialize 할 수 없는 값을 넘길경우 (ex. Tensortype) 에러가 발생합니다.</p>
-</dd>
-</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">예외:</th><td class="field-body"><p class="first last"><strong>TypeError</strong> -- 트래킹할 변수에 json serialize 할 수 없는 값을 넘길경우 (ex. Tensortype) 에러가 발생합니다.</p>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 </div>
