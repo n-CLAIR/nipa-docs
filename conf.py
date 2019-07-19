@@ -51,7 +51,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'NSML'
-copyright = '2018, NAVER'
+copyright = '2019, NAVER'
 author = 'NSML'
 
 # The version info for the project you're documenting, acts as replacement for
