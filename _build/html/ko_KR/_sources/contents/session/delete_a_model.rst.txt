@@ -14,15 +14,15 @@ Delete a model
     Example:
         .. code-block:: console
 
-            nsml model rm nsmlteam/ir_ph1_v2/4 24
+            nsml model rm nsmlteam/mnist/4 24
 
         .. code-block:: console
 
-            nsml model rm nsmlteam/ir_ph1_v2/4 "24"
+            nsml model rm nsmlteam/mnist/4 "24"
 
         .. code-block:: console
 
-            $ nsml model ls nsmlteam/ir_ph1_v2/4
+            $ nsml model ls nsmlteam/mnist/4
             Checkpoint    Last Modified    Elapsed    Summary                                                                    Size
             ------------  ---------------  ---------  -------------------------------------------------------------------------  ---------
             0             32 minutes ago   3.785      epoch=0, loss=7.015200052175436, epoch_total=5, acc=0.0021114864864864866  366.74 MB
@@ -30,8 +30,8 @@ Delete a model
             2             31 minutes ago   24.942     epoch=2, loss=6.377185855899845, epoch_total=5, acc=0.020551801801801804   366.74 MB
             3             30 minutes ago   25.053     epoch=3, loss=5.742813685992816, epoch_total=5, acc=0.05419481981981982    366.74 MB
             4             30 minutes ago   24.971     epoch=4, loss=4.847646936640009, epoch_total=5, acc=0.14273648648648649    366.74 MB
-            $ nsml model rm nsmlteam/ir_ph1_v2/4 2*
-            $ nsml model ls nsmlteam/ir_ph1_v2/4
+            $ nsml model rm nsmlteam/mnist/4 2*
+            $ nsml model ls nsmlteam/mnist/4
             Checkpoint    Last Modified    Elapsed    Summary                                                                  Size
             ------------  ---------------  ---------  -----------------------------------------------------------------------  ---------
             39            4 hours ago      60.381     step=39, test/loss=0.02888070044517517, test/accuracy=0.9904, epoch=39   175.81 KB

@@ -19,7 +19,7 @@ Step 1. 삭제할 모델 조회하기
 
     .. code-block:: console
 
-        $ nsml model ls nsmlteam/ir_ph1_v2/4
+        $ nsml model ls nsmlteam/mnist/4
         Checkpoint    Last Modified    Elapsed    Summary                           Size
         ------------  ---------------  ---------  --------------------------------  ---------
         0             32 minutes ago   3.785      epoch=0, loss=7.015200052175436   366.74 MB
@@ -42,54 +42,31 @@ Step 2. 모델 삭제하기 & 확인하기
 
     모델을 삭제하고, 원하는 대로 삭제가 되었는지 확인하시기 바랍니다.
 
+    웹페이지에서 오른쪽 상단의 본인의 프로필 사진 이미지를 클릭후에 Settings버튼을 누른후 Storage Management 구역에서 모델을 쉽게 확인하고 삭제할수도 있습니다.
+
     Example:
-
-        .. code-block:: console
-            :caption: 정규표현식 *으로 여러 개 삭제하기. 위 nsmlteam/ir_ph1_v2/4 세션에서 checkpoint가 1로 끝나는 모델 지우기
-
-            $ nsml model rm nsmlteam/ir_ph1_v2/4 *1
-            $ nsml model ls nsmlteam/ir_ph1_v2/4
-            Checkpoint    Last Modified    Elapsed    Summary                         Size
-            ------------  ---------------  ---------  -------------------------------  ---------
-            0             32 minutes ago   3.785      epoch=0, loss=7.015200052175436  366.74 MB
-            1             31 minutes ago   25.032     epoch=1, loss=6.762363957929182  366.74 MB
-            2             31 minutes ago   24.942     epoch=2, loss=6.377185855899845  366.74 MB
-            3             30 minutes ago   25.053     epoch=3, loss=5.742813685992816  366.74 MB
-            4             30 minutes ago   24.971     epoch=4, loss=4.847646936640009  366.74 MB
-
-        .. code-block:: console
-            :caption: 정규표현식 ?으로 여러 개 삭제하기. 위 nsmlteam/ir_ph1_v2/4 세션에서 1을 포함한 checkpoint가 1로 끝나는 모델 지우기
-
-            $ nsml model rm nsmlteam/ir_ph1_v2/4 ?1
-            $ nsml model ls nsmlteam/ir_ph1_v2/4
-            Checkpoint    Last Modified    Elapsed    Summary                         Size
-            ------------  ---------------  ---------  -------------------------------  ---------
-            0             32 minutes ago   3.785      epoch=0, loss=7.015200052175436  366.74 MB
-            2             31 minutes ago   24.942     epoch=2, loss=6.377185855899845  366.74 MB
-            3             30 minutes ago   25.053     epoch=3, loss=5.742813685992816  366.74 MB
-            4             30 minutes ago   24.971     epoch=4, loss=4.847646936640009  366.74 MB
 
         .. code-block:: console
             :caption: 해당 세션에 있는 모델 모두 삭제하기
 
-            $ nsml model rm nsmlteam/ir_ph1_v2/4 "*"
-            $ nsml model ls nsmlteam/ir_ph1_v2/4
+            $ nsml model rm nsmlteam/mnist/4 "*"
+            $ nsml model ls nsmlteam/mnist/4
             Checkpoint    Last Modified    Elapsed    Summary                         Size
             ------------  ---------------  ---------  ------------------------------  ---------
 
         .. code-block:: console
             :caption: session에 있는 1번부터 35번 model을 전부 bash script로 삭제하기
 
-            $ for i in `seq 1 35`; do nsml model rm nsmlteam/ir_ph1_v2/$i "*" ; done
-            $ nsml model ls nsmlteam/ir_ph1_v2/35
+            $ for i in `seq 1 35`; do nsml model rm nsmlteam/mnist/$i "*" ; done
+            $ nsml model ls nsmlteam/mnist/35
             Checkpoint    Last Modified    Elapsed    Summary                         Size
             ------------  ---------------  ---------  ------------------------------  ---------
 
         .. code-block:: console
             :caption: 1개 삭제하기
 
-            $ nsml model rm nsmlteam/ir_ph1_v2/4 0
-            $ nsml model ls nsmlteam/ir_ph1_v2/4
+            $ nsml model rm nsmlteam/mnist/4 0
+            $ nsml model ls nsmlteam/mnist/4
             Checkpoint    Last Modified    Elapsed    Summary                         Size
             ------------  ---------------  ---------  -------------------------------  ---------
             1             31 minutes ago   25.032     epoch=1, loss=6.762363957929182  366.74 MB

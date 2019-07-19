@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Load a model in a session &mdash; NSML  documentation</title>
+  <title>Load a model in a session &mdash; NSML  문서</title>
   
 
   
@@ -17,34 +17,37 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="색인" href="../genindex.html" />
     <link rel="search" title="검색" href="../search.html" />
     <link rel="next" title="Dataset" href="dataset/dataset.html" />
     <link rel="prev" title="Model Capacity Management" href="model_capacity_management.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -174,7 +177,7 @@
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> ls
 <span class="go">README.md      data_loader.py main.py        setup.py</span>
 
-<span class="gp">$</span> nsml run -d ir_ph1_v2
+<span class="gp">$</span> nsml run -d mnist
 <span class="go">INFO[2019/01/10 15:06:04.170] .nsmlignore check - start</span>
 <span class="go">INFO[2019/01/10 15:06:04.170] .nsmlignore check - done</span>
 <span class="go">INFO[2019/01/10 15:06:04.235] file integrity check - start</span>
@@ -192,11 +195,11 @@
 <span class="go">.....</span>
 <span class="go">Building docker image. It might take for a while</span>
 <span class="go">......</span>
-<span class="go">Session nsml_team/ir_ph1_v2/48 is started</span>
+<span class="go">Session nsml_team/mnist/48 is started</span>
 </pre></div>
 </div>
 <p>새롭게 만들어진 48번 세션을 <a class="reference internal" href="session/show_models.html#nsml-model-ls"><span class="std std-ref">모델리스트</span></a> 를 확인해 보면 다음과 같이 생성된 모델 목록을 확인할 수 있습니다.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> nsml model ls nsml_team/ir_ph1_v2/48
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> nsml model ls nsml_team/mnist/48
 <span class="go">Checkpoint    Last Modified    Elapsed    Summary                                                                    Size</span>
 <span class="go">------------  ---------------  ---------  -------------------------------------------------------------------------  ---------</span>
 <span class="go">0             36 minutes ago   3.397      epoch_total=5, loss=7.083731204539806, acc=0.0019707207207207205, epoch=0  366.74 MB</span>
@@ -208,7 +211,7 @@
 </div>
 <p>baseline 코드에서 다음과 같은 <a class="reference internal" href="nsml_library/nsml_load.html#nsml-load"><span class="std std-ref">nsml.load</span></a> 함수를 호출하는 3줄의 소스코드를 삽입하면 다른 세션에서 학습한 모델을 불러올 수 있습니다. 48번 세션에 있는 4번 checkpoint 모델을 가져와서 새로운 세션을 만들어보겠습니다.</p>
 <p>baseline main.py에 다음 3줄의 코드를 추가합니다.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nsml</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">checkpoint</span><span class="o">=</span><span class="s1">&#39;4&#39;</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="s1">&#39;nsml_team/ir_ph1_v2/48&#39;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nsml</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">checkpoint</span><span class="o">=</span><span class="s1">&#39;4&#39;</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="s1">&#39;nsml_team/mnist/48&#39;</span><span class="p">)</span>
 <span class="n">nsml</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;saved&#39;</span><span class="p">)</span>
 <span class="nb">exit</span><span class="p">()</span>
 </pre></div>
@@ -225,7 +228,7 @@
     <span class="n">bTrainmode</span> <span class="o">=</span> <span class="bp">True</span>
 
     <span class="c1"># 이 자리에 3줄의 load/save 소스코드가 들어갑니다.</span>
-    <span class="n">nsml</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">checkpoint</span><span class="o">=</span><span class="s1">&#39;4&#39;</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="s1">&#39;nsml_team/ir_ph1_v2/48&#39;</span><span class="p">)</span>
+    <span class="n">nsml</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">checkpoint</span><span class="o">=</span><span class="s1">&#39;4&#39;</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="s1">&#39;nsml_team/mnist/48&#39;</span><span class="p">)</span>
     <span class="n">nsml</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;saved&#39;</span><span class="p">)</span>
     <span class="nb">exit</span><span class="p">()</span>
     <span class="c1"># 다른 장소에 넣으셔도 되지만 bind_model() 아래에 넣어주시기 바랍니다.</span>
@@ -238,7 +241,7 @@
 </pre></div>
 </div>
 <p>세션을 다시 한번 돌려보겠습니다. 49번 세션이 시작됩니다.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> nsml run -d ir_ph1_v2
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> nsml run -d mnist
 <span class="go">INFO[2019/01/10 15:10:10.803] .nsmlignore check - start</span>
 <span class="go">INFO[2019/01/10 15:10:10.804] .nsmlignore check - done</span>
 <span class="go">INFO[2019/01/10 15:10:10.942] file integrity check - start</span>
@@ -256,11 +259,11 @@
 <span class="go">.....</span>
 <span class="go">Building docker image. It might take for a while</span>
 <span class="go">......</span>
-<span class="go">Session nsml_team/ir_ph1_v2/49 is started</span>
+<span class="go">Session nsml_team/mnist/49 is started</span>
 </pre></div>
 </div>
 <p>로그에서 다음 문구 2개를 발견하시면 모델이 정상적으로 load되었음을 확인할 수 있습니다.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> nsml logs nsml_team/ir_ph1_v2/49
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> nsml logs nsml_team/mnist/49
 <span class="go">...</span>
 <span class="go">model loaded!</span>
 <span class="go">model saved!</span>
@@ -268,14 +271,14 @@
 </pre></div>
 </div>
 <p>saved라는 이름의 checkpoint가 생성됩니다. nsml.save() 함수에 'saved'라는 이름을 지정했기 때문입니다.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> nsml model ls nsml_team/ir_ph1_v2/49
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> nsml model ls nsml_team/mnist/49
 <span class="go">Checkpoint    Last Modified    Elapsed    Summary    Size</span>
 <span class="go">------------  ---------------  ---------  ---------  ---------</span>
 <span class="go">saved         20 minutes ago   0.000                 366.74 MB</span>
 </pre></div>
 </div>
 <p>다른 세션들과 같은 방법으로 nsml submit 명령어를 사용하여 모델을 리더보드에 제출할 수 있습니다.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> nsml submit nsml_team/ir_ph1_v2/49 saved
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> nsml submit nsml_team/mnist/49 saved
 <span class="go">........</span>
 <span class="go">Building docker image. It might take for a while</span>
 <span class="go">.............</span>
@@ -297,7 +300,7 @@
         <a href="dataset/dataset.html" class="btn btn-neutral float-right" title="Dataset" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="model_capacity_management.html" class="btn btn-neutral" title="Model Capacity Management" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="model_capacity_management.html" class="btn btn-neutral float-left" title="Model Capacity Management" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -306,7 +309,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, NAVER
+        &copy; Copyright 2018, NAVER
 
     </p>
   </div>
@@ -323,27 +326,16 @@
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script type="text/javascript" src="../_static/translations.js"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

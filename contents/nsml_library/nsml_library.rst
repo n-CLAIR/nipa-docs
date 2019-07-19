@@ -15,7 +15,5 @@ NSML library
         nsml_bind
         nsml_save
         nsml_load
-        nsml_cache
         nsml_paused
-        nsml_copy
         bind_model

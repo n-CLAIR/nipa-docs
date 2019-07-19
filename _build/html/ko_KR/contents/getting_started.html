@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Getting started &mdash; NSML  documentation</title>
+  <title>Getting started &mdash; NSML  문서</title>
   
 
   
@@ -17,34 +17,37 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="색인" href="../genindex.html" />
     <link rel="search" title="검색" href="../search.html" />
     <link rel="next" title="Model Capacity Management" href="model_capacity_management.html" />
     <link rel="prev" title="Welcome to NSML Documentation" href="../index.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -181,18 +184,18 @@
 <div><p><a class="reference external" href="https://nipa.nsml.navercorp.com/signup">https://nipa.nsml.navercorp.com/signup</a> 에서 Github 계정으로 가입합니다.
 모든 참가자는 Team 안에 속해 있어야 합니다. Team에 속한 사람들끼리 session을 공유할 수 있습니다.</p>
 <div class="admonition note">
-<p class="first admonition-title">주석</p>
+<p class="admonition-title">참고</p>
 <p>Github 계정과 Team 이름은 다음과 같은 규칙을 만족해야 합니다.</p>
-<ul class="last simple">
-<li>Github username은 <strong>5자리 이상</strong> 으로 지정해야 합니다.</li>
-<li>Team 이름은 <strong>대/소문자 영어 5~20자리, 특수문자는 “_” 만</strong> 사용하여 지정해야 합니다.</li>
-<li>Team 이름과 동일한 Github username이 없어야 합니다. 모두 <strong>다르게</strong> 지정해야 합니다.</li>
+<ul class="simple">
+<li><p>Github username은 <strong>5자리 이상</strong> 으로 지정해야 합니다.</p></li>
+<li><p>Team 이름은 <strong>대/소문자 영어 5~20자리, 특수문자는 “_” 만</strong> 사용하여 지정해야 합니다.</p></li>
+<li><p>Team 이름과 동일한 Github username이 없어야 합니다. 모두 <strong>다르게</strong> 지정해야 합니다.</p></li>
 </ul>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">주석</p>
+<p class="admonition-title">참고</p>
 <p><strong>Github에서 Two-factor authentication을 해제해야 사용 가능합니다.</strong></p>
-<p class="last">(확인 방법 : Settings &gt; Security &gt; Two-factor authentication 체크)</p>
+<p>(확인 방법 : Settings &gt; Security &gt; Two-factor authentication 체크)</p>
 </div>
 </div></blockquote>
 </div>
@@ -209,9 +212,9 @@
 <div class="section" id="install-local-nsml">
 <h2>Install local-nsml<a class="headerlink" href="#install-local-nsml" title="제목 주소">¶</a></h2>
 <blockquote>
-<div><dl class="docutils">
-<dt>What is a local-nsml?</dt>
-<dd>NSML에 올리는 코드를 로컬 환경에서 디버깅할 때, NSML의 라이브러리에 대해서 생기는 <cite>ImportError</cite> 를 방지하기 위한 파이썬 패키지입니다.</dd>
+<div><dl class="simple">
+<dt>What is a local-nsml?</dt><dd><p>NSML에 올리는 코드를 로컬 환경에서 디버깅할 때, NSML의 라이브러리에 대해서 생기는 <cite>ImportError</cite> 를 방지하기 위한 파이썬 패키지입니다.</p>
+</dd>
 </dl>
 <p>pip가 이미 설치되어 있다는 전제 하에, 아래 명령어를 입력하면 됩니다.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">pip install git+https://github.com/n-CLAIR/nsml-local</span>
@@ -225,11 +228,10 @@
 <div><p>NSML을 사용하기 위해선 로그인을 해야 합니다.
 Github 아이디와 비밀번호로 로그인합니다. 아래 소스 코드에서는 <code class="docutils literal notranslate"><span class="pre">nsmlteam</span></code> 을 Github 아이디로 사용하여 로그인하겠습니다.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> nsml login
-<span class="go">INFO[2018/11/19 12:31:40.032] connecting to hack-cli.nsml.navercorp.com:18553</span>
-<span class="go">INFO[2018/11/19 12:31:42.058] there is no update</span>
-<span class="go">GitHub Username: nsmlteam</span>
-<span class="go">GitHub Password: **********</span>
-<span class="go">INFO[2018/11/19 12:33:42.355] Welcome to NSML!</span>
+<span class="go">INFO[2019/07/19 04:32:38.667] connecting to nipa-cli.nsml.navercorp.com:18553</span>
+<span class="go">GitHub Username: nsml-admin</span>
+<span class="go">GitHub Password: ****************</span>
+<span class="go">INFO[2019/07/19 04:32:55.570] Welcome to NSML!</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -260,21 +262,22 @@ pwd로 <code class="docutils literal notranslate"><span class="pre">/Users/user/
 <div class="section" id="run-a-session">
 <h2>Run a session<a class="headerlink" href="#run-a-session" title="제목 주소">¶</a></h2>
 <blockquote>
-<div><p>nsml run을 할 때는 dataset을 -d 옵션으로 반드시 지정해야 합니다. dataset의 이름은 ir_ph1_v2이며 <code class="docutils literal notranslate"><span class="pre">-d</span> <span class="pre">ir_ph1_v2</span></code> 로 지정합니다. <code class="docutils literal notranslate"><span class="pre">-e</span> <span class="pre">main.py</span></code> 로 entry 파일(시작 파일)를 옵션으로 같이 지정할 수 있습니다.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">nsml run -d ir_ph1_v2 -e main.py</span>
+<div><p>nsml run을 할 때는 dataset을 -d 옵션으로 반드시 지정해야 합니다. 예제의 dataset 이름은 mnist이며 <code class="docutils literal notranslate"><span class="pre">-d</span> <span class="pre">mnist</span></code> 로 지정합니다. <code class="docutils literal notranslate"><span class="pre">-e</span> <span class="pre">main.py</span></code> 로 entry 파일(시작 파일)를 옵션으로 같이 지정할 수 있습니다.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">nsml run -d mnist -e main.py</span>
 </pre></div>
 </div>
-<p>아래 예제에서는 이번 AiHackathon2018의 baseline code를 실행시켜보겠습니다.
+<p>아래 예제에서는 이번 해커톤의 baseline code를 실행시켜보겠습니다.
 <a class="reference internal" href="session/run_a_session.html#nsml-run"><span class="std std-ref">nsml run</span></a> 을 이용합니다.</p>
 <p>Github의 baseline 레파지토리를 먼저 clone합니다.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git clone git clone git@github.com:AiHackathon2018/AI-Vision.git
-<span class="go">Cloning into &#39;AI-Vision&#39;...</span>
-<span class="go">remote: Enumerating objects: 43, done.</span>
-<span class="go">remote: Total 43 (delta 0), reused 0 (delta 0), pack-reused 43</span>
-<span class="go">Receiving objects: 100% (43/43), 17.97 KiB | 3.59 MiB/s, done.</span>
-<span class="go">Resolving deltas: 100% (14/14), done.</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git clone https://github.com/ai-starthon/AI_Starthon2019.git
+<span class="go">Cloning into &#39;AI_Starthon2019&#39;...</span>
+<span class="go">remote: Enumerating objects: 48, done.</span>
+<span class="go">remote: Counting objects: 100% (48/48), done.</span>
+<span class="go">remote: Compressing objects: 100% (31/31), done.</span>
+<span class="go">remote: Total 48 (delta 14), reused 0 (delta 0), pack-reused 0</span>
+<span class="go">Unpacking objects: 100% (48/48), done.</span>
 
-<span class="gp">$</span> nsml run -d ir_ph1_v2 -e main.py
+<span class="gp">$</span> nsml run -d mnist -e main.py
 <span class="go">INFO[2019/01/02 16:11:20.959] .nsmlignore check - start</span>
 <span class="go">INFO[2019/01/02 16:11:20.959] .nsmlignore check - done</span>
 <span class="go">INFO[2019/01/02 16:11:20.996] file integrity check - start</span>
@@ -292,7 +295,7 @@ pwd로 <code class="docutils literal notranslate"><span class="pre">/Users/user/
 <span class="go">.....</span>
 <span class="go">Building docker image. It might take for a while</span>
 <span class="go">......</span>
-<span class="go">Session nsmlteam/ir_ph1_v2/1 is started</span>
+<span class="go">Session nsmlteam/mnist/1 is started</span>
 </pre></div>
 </div>
 <p>지금까지 NSML의 기본 사용법을 알아보았습니다.  다음 파트부터는 NSML에서 사용하는 명령어들을 알아보겠습니다.</p>
@@ -311,7 +314,7 @@ pwd로 <code class="docutils literal notranslate"><span class="pre">/Users/user/
         <a href="model_capacity_management.html" class="btn btn-neutral float-right" title="Model Capacity Management" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../index.html" class="btn btn-neutral" title="Welcome to NSML Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../index.html" class="btn btn-neutral float-left" title="Welcome to NSML Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -320,7 +323,7 @@ pwd로 <code class="docutils literal notranslate"><span class="pre">/Users/user/
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, NAVER
+        &copy; Copyright 2018, NAVER
 
     </p>
   </div>
@@ -337,27 +340,16 @@ pwd로 <code class="docutils literal notranslate"><span class="pre">/Users/user/
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script type="text/javascript" src="../_static/translations.js"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

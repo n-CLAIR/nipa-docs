@@ -22,7 +22,7 @@ Fork a session
     Example:
         .. code-block:: console
 
-            nsml fork nsmlteam/ir_ph1_v2/4
+            nsml fork nsmlteam/mnist/4
 
     Options:
         -a, --args                  새로운 session 에 전달할 arguments 입니다.

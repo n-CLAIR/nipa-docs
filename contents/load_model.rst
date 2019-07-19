@@ -16,7 +16,7 @@ Load a model in a session
         $ ls
         README.md      data_loader.py main.py        setup.py
 
-        $ nsml run -d ir_ph1_v2
+        $ nsml run -d mnist
         INFO[2019/01/10 15:06:04.170] .nsmlignore check - start
         INFO[2019/01/10 15:06:04.170] .nsmlignore check - done
         INFO[2019/01/10 15:06:04.235] file integrity check - start
@@ -34,14 +34,14 @@ Load a model in a session
         .....
         Building docker image. It might take for a while
         ......
-        Session nsml_team/ir_ph1_v2/48 is started
+        Session nsml_team/mnist/48 is started
 
 
     새롭게 만들어진 48번 세션을 :ref:`모델리스트<nsml model ls>` 를 확인해 보면 다음과 같이 생성된 모델 목록을 확인할 수 있습니다.
 
     .. code-block:: console
 
-        $ nsml model ls nsml_team/ir_ph1_v2/48
+        $ nsml model ls nsml_team/mnist/48
         Checkpoint    Last Modified    Elapsed    Summary                                                                    Size
         ------------  ---------------  ---------  -------------------------------------------------------------------------  ---------
         0             36 minutes ago   3.397      epoch_total=5, loss=7.083731204539806, acc=0.0019707207207207205, epoch=0  366.74 MB
@@ -57,7 +57,7 @@ Load a model in a session
 
     .. code-block:: python
 
-        nsml.load(checkpoint='4', session='nsml_team/ir_ph1_v2/48')
+        nsml.load(checkpoint='4', session='nsml_team/mnist/48')
         nsml.save('saved')
         exit()
 
@@ -76,7 +76,7 @@ Load a model in a session
                 bTrainmode = True
 
                 # 이 자리에 3줄의 load/save 소스코드가 들어갑니다.
-                nsml.load(checkpoint='4', session='nsml_team/ir_ph1_v2/48')
+                nsml.load(checkpoint='4', session='nsml_team/mnist/48')
                 nsml.save('saved')
                 exit()
                 # 다른 장소에 넣으셔도 되지만 bind_model() 아래에 넣어주시기 바랍니다.
@@ -91,7 +91,7 @@ Load a model in a session
 
     .. code-block:: console
 
-        $ nsml run -d ir_ph1_v2
+        $ nsml run -d mnist
         INFO[2019/01/10 15:10:10.803] .nsmlignore check - start
         INFO[2019/01/10 15:10:10.804] .nsmlignore check - done
         INFO[2019/01/10 15:10:10.942] file integrity check - start
@@ -109,14 +109,14 @@ Load a model in a session
         .....
         Building docker image. It might take for a while
         ......
-        Session nsml_team/ir_ph1_v2/49 is started
+        Session nsml_team/mnist/49 is started
 
 
     로그에서 다음 문구 2개를 발견하시면 모델이 정상적으로 load되었음을 확인할 수 있습니다.
 
     .. code-block:: console
 
-        $ nsml logs nsml_team/ir_ph1_v2/49
+        $ nsml logs nsml_team/mnist/49
         ...
         model loaded!
         model saved!
@@ -126,7 +126,7 @@ Load a model in a session
 
     .. code-block:: console
     
-        $ nsml model ls nsml_team/ir_ph1_v2/49
+        $ nsml model ls nsml_team/mnist/49
         Checkpoint    Last Modified    Elapsed    Summary    Size
         ------------  ---------------  ---------  ---------  ---------
         saved         20 minutes ago   0.000                 366.74 MB
@@ -136,7 +136,7 @@ Load a model in a session
 
     .. code-block:: console
 
-        $ nsml submit nsml_team/ir_ph1_v2/49 saved
+        $ nsml submit nsml_team/mnist/49 saved
         ........
         Building docker image. It might take for a while
         .............

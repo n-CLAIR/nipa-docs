@@ -14,12 +14,8 @@ nsml.paused
 
     .. warning::
 
-        entry 파일의 main 함수가 있다면 main 함수의 ``locals()`` 변수를 넘겨주어야 합니다. 그렇지 않으면 아래와 같은 에러가 발생합니다.
+        entry 파일의 main 함수가 있다면 main 함수의 ``locals()`` 변수를 넘겨주어야 합니다. 그렇지 않으면 에러가 발생합니다.
 
-        .. code-block:: console
-
-            Traceback (most recent call last):
-            NameError: name 'nsml' is not defined
 
     :ref:`nsml fork<nsml fork>`
         :ref:`nsml.load<nsml.load()>` 함수가 호출된 후 `nsml.paused`_ 함수는 끝납니다.

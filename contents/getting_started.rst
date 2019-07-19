@@ -55,11 +55,10 @@ Login
     .. code-block:: console
 
         $ nsml login
-        INFO[2018/11/19 12:31:40.032] connecting to hack-cli.nsml.navercorp.com:18553
-        INFO[2018/11/19 12:31:42.058] there is no update
-        GitHub Username: nsmlteam
-        GitHub Password: **********
-        INFO[2018/11/19 12:33:42.355] Welcome to NSML!
+        INFO[2019/07/19 04:32:38.667] connecting to nipa-cli.nsml.navercorp.com:18553
+        GitHub Username: nsml-admin
+        GitHub Password: ****************
+        INFO[2019/07/19 04:32:55.570] Welcome to NSML!
 
 Path registration
 ------------------
@@ -94,28 +93,29 @@ Path registration
 Run a session
 -------------
 
-    nsml run을 할 때는 dataset을 -d 옵션으로 반드시 지정해야 합니다. dataset의 이름은 ir_ph1_v2이며 ``-d ir_ph1_v2`` 로 지정합니다. ``-e main.py`` 로 entry 파일(시작 파일)를 옵션으로 같이 지정할 수 있습니다.
+    nsml run을 할 때는 dataset을 -d 옵션으로 반드시 지정해야 합니다. 예제의 dataset 이름은 mnist이며 ``-d mnist`` 로 지정합니다. ``-e main.py`` 로 entry 파일(시작 파일)를 옵션으로 같이 지정할 수 있습니다.
 
     .. code-block:: console
 
-        nsml run -d ir_ph1_v2 -e main.py
+        nsml run -d mnist -e main.py
 
 
-    아래 예제에서는 이번 AiHackathon2018의 baseline code를 실행시켜보겠습니다.
+    아래 예제에서는 이번 해커톤의 baseline code를 실행시켜보겠습니다.
     :ref:`nsml run <nsml run>` 을 이용합니다.
     
     Github의 baseline 레파지토리를 먼저 clone합니다.
 
     .. code-block:: console
 
-        $ git clone git clone git@github.com:AiHackathon2018/AI-Vision.git
-        Cloning into 'AI-Vision'...
-        remote: Enumerating objects: 43, done.
-        remote: Total 43 (delta 0), reused 0 (delta 0), pack-reused 43
-        Receiving objects: 100% (43/43), 17.97 KiB | 3.59 MiB/s, done.
-        Resolving deltas: 100% (14/14), done.
+        $ git clone https://github.com/ai-starthon/AI_Starthon2019.git
+        Cloning into 'AI_Starthon2019'...
+        remote: Enumerating objects: 48, done.
+        remote: Counting objects: 100% (48/48), done.
+        remote: Compressing objects: 100% (31/31), done.
+        remote: Total 48 (delta 14), reused 0 (delta 0), pack-reused 0
+        Unpacking objects: 100% (48/48), done.
 
-        $ nsml run -d ir_ph1_v2 -e main.py
+        $ nsml run -d mnist -e main.py
         INFO[2019/01/02 16:11:20.959] .nsmlignore check - start
         INFO[2019/01/02 16:11:20.959] .nsmlignore check - done
         INFO[2019/01/02 16:11:20.996] file integrity check - start
@@ -133,7 +133,7 @@ Run a session
         .....
         Building docker image. It might take for a while
         ......
-        Session nsmlteam/ir_ph1_v2/1 is started
+        Session nsmlteam/mnist/1 is started
 
 
     지금까지 NSML의 기본 사용법을 알아보았습니다.  다음 파트부터는 NSML에서 사용하는 명령어들을 알아보겠습니다.

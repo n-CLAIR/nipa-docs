@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>nsml.save &mdash; NSML  documentation</title>
+  <title>nsml.save &mdash; NSML  문서</title>
   
 
   
@@ -17,34 +17,37 @@
   
 
   
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="색인" href="../../genindex.html" />
     <link rel="search" title="검색" href="../../search.html" />
     <link rel="next" title="nsml.load" href="nsml_load.html" />
     <link rel="prev" title="nsml.bind" href="nsml_bind.html" /> 
-
-  
-  <script src="../../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -101,9 +104,7 @@
 <li class="toctree-l2"><a class="reference internal" href="nsml_bind.html">nsml.bind</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">nsml.save</a></li>
 <li class="toctree-l2"><a class="reference internal" href="nsml_load.html">nsml.load</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nsml_cache.html">nsml.cache</a></li>
 <li class="toctree-l2"><a class="reference internal" href="nsml_paused.html">nsml.paused</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nsml_copy.html">nsml.copy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bind_model.html">bind_model</a></li>
 </ul>
 </li>
@@ -183,30 +184,26 @@
 <span id="id1"></span><h1>nsml.save<a class="headerlink" href="#nsml-save" title="제목 주소">¶</a></h1>
 <dl class="function">
 <dt id="nsml.save">
-<code class="descclassname">nsml.</code><code class="descname">save</code><span class="sig-paren">(</span><em>checkpoint=None</em>, <em>save_fn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#nsml.save" title="정의 주소">¶</a></dt>
+<code class="sig-prename descclassname">nsml.</code><code class="sig-name descname">save</code><span class="sig-paren">(</span><em class="sig-param">checkpoint=None</em>, <em class="sig-param">save_fn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#nsml.save" title="정의 주소">¶</a></dt>
 <dd><p>모델을 저장합니다. <a class="reference internal" href="nsml_bind.html#nsml-bind"><span class="std std-ref">nsml.bind()</span></a> 함수에서는 save 함수를 정의만 합니다.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">매개 변수:</th><td class="field-body"><ul class="first last simple">
-<li><strong>str</strong> -- <p>매 checkpoint 마다 저장될 모델의 구분을 위해 값을 받습니다.</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>str</strong> -- <p>매 checkpoint 마다 저장될 모델의 구분을 위해 값을 받습니다.</p>
 <p>checkpoint 값으로 내부적으로 모델을 구분합니다.
 checkpoint 이 None 일때는 현재 시각의 이름으로 모델이 저장됩니다.
 똑같은 checkpoint 을 두번 저장하면 overwrite 됩니다.</p>
-</li>
-<li><strong>save_fn</strong> (<em>fn</em>) -- <p>모델을 저장하는 방법이 정의된 함수를 인수로 받습니다. save 함수가 호출되는 우선순위는</p>
-<ol class="arabic">
-<li>이 함수로 전달된 save_fn</li>
-<li>nsml.bind() 에 binding 된 save 함수</li>
-<li>NSML 에서 정의된 default save 함수입니다.</li>
+</p></li>
+<li><p><strong>save_fn</strong> (<em>fn</em>) -- <p>모델을 저장하는 방법이 정의된 함수를 인수로 받습니다. save 함수가 호출되는 우선순위는</p>
+<ol class="arabic simple">
+<li><p>이 함수로 전달된 save_fn</p></li>
+<li><p>nsml.bind() 에 binding 된 save 함수</p></li>
+<li><p>NSML 에서 정의된 default save 함수입니다.</p></li>
 </ol>
-</li>
+</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <p>Example</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">save</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
     <span class="n">torch</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="nb">object</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
@@ -229,7 +226,7 @@ checkpoint 이 None 일때는 현재 시각의 이름으로 모델이 저장됩�
         <a href="nsml_load.html" class="btn btn-neutral float-right" title="nsml.load" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="nsml_bind.html" class="btn btn-neutral" title="nsml.bind" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="nsml_bind.html" class="btn btn-neutral float-left" title="nsml.bind" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -238,7 +235,7 @@ checkpoint 이 None 일때는 현재 시각의 이름으로 모델이 저장됩�
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, NAVER
+        &copy; Copyright 2018, NAVER
 
     </p>
   </div>
@@ -255,27 +252,16 @@ checkpoint 이 None 일때는 현재 시각의 이름으로 모델이 저장됩�
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>
